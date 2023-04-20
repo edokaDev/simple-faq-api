@@ -1,7 +1,7 @@
 import os
 
 DEBUG = 'RENDER' not in os.environ
-postgres = False
+postgres = os.environ.get('USE_POSTGRES')
 
 if DEBUG:
     if postgres:
